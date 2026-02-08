@@ -158,4 +158,5 @@ if st.button("Фух, Амінь", disabled=is_disabled):
     else:
         st.error("ШІ не підключено")
 
-st.markdown("<br><center style='color: #D02090; font-family: cursive;'>Зроблено з любов'ю, а також з ненавістю до деяких персон. Саранхе🩷</center>", unsafe_allow_html=True)
+
+st.markdown("<br><center style='color: #D02090; font-family: cursive;'>Зроблено з любов'ю!! Ну а також з ненавістю до деяких персон. Саранхе🩷</center>", unsafe_allow_html=True)
