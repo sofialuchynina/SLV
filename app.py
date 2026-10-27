@@ -61,6 +61,7 @@ def set_bg_local(image_file):
         st.markdown(
             f"""
             <style>
+            /* Фонове зображення */
             .stApp {{
                 background-image: url("data:image/avif;base64,{encoded_string}");
                 background-size: cover;
@@ -68,6 +69,7 @@ def set_bg_local(image_file):
                 background-attachment: fixed;
             }}
 
+            /* Заголовок */
             h1 {{
                 color: #FFC0CB !important;
                 font-family: 'Comic Sans MS', cursive;
@@ -75,19 +77,35 @@ def set_bg_local(image_file):
                 text-shadow: 1px 1px 2px black;
             }}
 
+            /* Підпис поля */
             .stTextInput label {{
                 color: #000000 !important;
                 font-weight: bold;
             }}
 
-            input {{
+            /* ПОЛЕ ВВОДУ — НІЖНО-РОЖЕВИЙ BORDER */
+            div[data-testid="stTextInput"] input {{
                 color: #FF55A3 !important;
+                border: 2px solid #FFC0CB !important;
+                border-radius: 12px !important;
+                outline: none !important;
+                box-shadow: none !important;
+                transition: border-color 0.2s ease,
+                            box-shadow 0.2s ease;
             }}
 
-            input::placeholder {{
+            /* Бордер при натисканні на поле */
+            div[data-testid="stTextInput"] input:focus {{
+                border: 2px solid #F19CBB !important;
+                box-shadow: 0 0 5px rgba(241, 156, 187, 0.35) !important;
+            }}
+
+            /* Колір placeholder */
+            div[data-testid="stTextInput"] input::placeholder {{
                 color: #4B4B4B !important;
             }}
 
+            /* КНОПКА */
             div.stButton > button {{
                 background-color: #FFC0CB !important;
                 color: #5D2E46 !important;
@@ -95,13 +113,16 @@ def set_bg_local(image_file):
                 border-radius: 20px !important;
                 width: 100% !important;
                 font-weight: bold !important;
+                transition: background-color 0.2s ease;
             }}
 
+            /* Кнопка при наведенні */
             div.stButton > button:hover {{
                 background-color: #FFB6C1 !important;
                 border-color: #F19CBB !important;
             }}
 
+            /* Блок із передбаченням */
             .prediction-box {{
                 background-color: #FFF0F5;
                 padding: 20px;
@@ -115,6 +136,7 @@ def set_bg_local(image_file):
                 box-shadow: 0px 4px 15px rgba(208, 32, 144, 0.1);
             }}
 
+            /* Картки Таро */
             .card-display {{
                 background-color: #FFFFFF;
                 border: 2px solid #FFB6C1;
@@ -127,6 +149,7 @@ def set_bg_local(image_file):
                 margin: 5px;
             }}
 
+            /* Текст завантаження */
             div[data-testid="stSpinner"] p {{
                 color: #D02090 !important;
                 font-family: 'Comic Sans MS', cursive !important;
@@ -138,6 +161,7 @@ def set_bg_local(image_file):
                 color: #D02090 !important;
             }}
 
+            /* Напис унизу екрана */
             .footer-klitschko {{
                 position: fixed;
                 bottom: 10px;
@@ -153,6 +177,7 @@ def set_bg_local(image_file):
                 text-shadow: 1px 1px 2px black;
             }}
 
+            /* Для телефонів */
             @media (max-width: 600px) {{
                 .footer-klitschko {{
                     font-size: 18px;
@@ -290,15 +315,19 @@ if st.button("Летс гоу бічессссс", disabled=is_disabled):
         with st.spinner("Ну їбать"):
             try:
                 prompt = (
-                    f"Ти таролог у стилі 'подружки-гадалки', яка може як добре про карти сказати, так і погане, а також давай точну відповідь на запитання. Питання: '{question}'. "
+                    f"Ти таролог у стилі 'подружки-гадалки', "
+                    f"яка може як добре про карти сказати, так і погане, "
+                    f"а також давай точну відповідь на запитання. "
+                    f"Питання: '{question}'. "
                     f"Випали карти: {', '.join(selected_cards)}. "
-                    f"Дай коротке, зухвале, але магічне пророцтво українською мовою. В кінці можеш зробити висновок того всього. "
-                    f"Використовуй емодзі, мати та звертайся до користувача на 'ти'."
+                    f"Дай коротке, зухвале, але магічне пророцтво "
+                    f"українською мовою. В кінці можеш зробити висновок "
+                    f"того всього. Використовуй емодзі, мати та "
+                    f"звертайся до користувача на 'ти'."
                 )
 
                 response = model.generate_content(prompt)
 
-                # Безпечне відображення відповіді ШІ
                 answer = html.escape(response.text).replace(
                     "\n", "<br>"
                 )
