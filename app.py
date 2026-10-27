@@ -91,7 +91,7 @@ def set_bg_local(image_file):
             div.stButton > button {{
                 background-color: #FFC0CB !important;
                 color: #5D2E46 !important;
-                border: 2px solid #FFB6C1 !important;
+                border: 2px solid #000000 !important;
                 border-radius: 20px !important;
                 width: 100% !important;
                 font-weight: bold !important;
