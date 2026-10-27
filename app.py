@@ -69,9 +69,10 @@ def set_bg_local(image_file):
             }}
 
             h1 {{
-                color: #D02090 !important;
+                color: #FFC0CB !important;
                 font-family: 'Comic Sans MS', cursive;
                 text-align: center;
+                text-shadow: 1px 1px 2px black;
             }}
 
             .stTextInput label {{
@@ -149,7 +150,7 @@ def set_bg_local(image_file):
                 font-weight: bold;
                 z-index: 999999;
                 pointer-events: none;
-                text-shadow: 1px 1px 2px white;
+                text-shadow: 1px 1px 2px black;
             }}
 
             @media (max-width: 600px) {{
