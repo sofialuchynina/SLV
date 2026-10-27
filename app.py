@@ -120,21 +120,21 @@ def set_bg_local(image_file):
                 padding: 15px;
                 border-radius: 15px;
                 text-align: center;
-                color: #FFC0CB;
+                color: #5D2E46;
                 font-weight: bold;
                 font-family: 'Comic Sans MS', cursive;
                 margin: 5px;
             }}
 
             div[data-testid="stSpinner"] p {{
-                color: #D02090 !important;
+                color: #5D2E46 !important;
                 font-family: 'Comic Sans MS', cursive !important;
                 text-align: center !important;
                 font-size: 1.1rem;
             }}
 
             div[data-testid="stSpinner"] i {{
-                color: #D02090 !important;
+                color: #5D2E46 !important;
             }}
 
             .footer-klitschko {{
