@@ -33,7 +33,7 @@ st.set_page_config(
 st.markdown("""
     <style>
     .stApp {
-        background-image: url('C:/Users/Sofia/Desktop/пітон/tarot_progect/dIQMZLS.jpg');
+        background-image: url('C:\Users\Sofia\Desktop\пітон\tarot_progect\a1ed4abc69fe6bbcf7b0b5d5ade029a9.jpg');
     }
     h1 {
         color: #D02090 !important;
