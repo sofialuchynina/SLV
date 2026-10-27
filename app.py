@@ -81,7 +81,7 @@ def set_bg_local(image_file):
             }}
 
             input {{
-                color: #C71585 !important;
+                color: #F19CBB !important;
             }}
 
             input::placeholder {{
