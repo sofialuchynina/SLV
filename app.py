@@ -3,6 +3,13 @@ import random
 import google.generativeai as genai
 import streamlit as st
 
+
+st.set_page_config(
+    page_title="SLV",
+    page_icon="💌",
+    layout="centered"
+)
+
 try:
   GEMINI_API_KEY = st.secrets["GEMINI_API_KEY"]
   genai.configure(api_key=GEMINI_API_KEY)
@@ -30,8 +37,6 @@ def get_working_model():
 
 model = get_working_model()
 
-# --- 2. КОНФІГУРАЦІЯ СТОРІНКИ ---
-st.set_page_config(page_title="SLV", page_icon="💌", layout="centered")
 
 
 # Функція для завантаження локальної .avif картинки як фону
@@ -101,6 +106,21 @@ def set_bg_local(image_file):
         div[data-testid="stSpinner"] i {{
             color: #D02090 !important;
         }}
+
+        .footer-klitschko {
+    position: fixed;
+    bottom: 10px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    color: #D02090;
+    font-family: cursive;
+    font-size: 24px;
+    font-weight: bold;
+    z-index: 999999;
+    pointer-events: none;
+}
+}
         </style>
         """,
         unsafe_allow_html=True,
@@ -113,7 +133,7 @@ def set_bg_local(image_file):
 set_bg_local("abstract-pink-pastel-shadow-light-diagonal-shape-background_164305-3819.avif")
 
 # --- 4. ЗАГОЛОВОК ТА ВВЕДЕННЯ ---
-st.title("Сука, Любить Він мене?")
+st.title("Наша абривіатура СЛВ - Сука, Любить Він мене?")
 
 question = st.text_input("Давай ніщєта, задавай питання:", placeholder="тут")
 
@@ -236,9 +256,12 @@ if st.button("Летс гоу бічессссс", disabled=is_disabled):
   else:
     st.error("ШІ не підключено")
 
+
 st.markdown(
-    "<br><center style='color: #D02090; font-family: cursive;'>Зроблено з"
-    " любов'ю!! Ну а також з ненавістю до деяких персон."
-    " Саранхе🩷</center>",
+    """
+    <div class="footer-klitschko">
+        КЛІЧКОООООООО
+    </div>
+    """,
     unsafe_allow_html=True,
 )
