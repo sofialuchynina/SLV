@@ -52,7 +52,7 @@ st.set_page_config(
     layout="centered"
 )
 
-st.markdown("""
+st.markdown(""
     <style>
     .stApp {
         background-image: url('C:\Users\Sofia\Desktop\пітон\tarot_progect\dIQMZLS.jpg');
