@@ -120,7 +120,6 @@ def set_bg_local(image_file):
     z-index: 999999;
     pointer-events: none;
 }
-}
         </style>
         """,
         unsafe_allow_html=True,
