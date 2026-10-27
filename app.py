@@ -99,7 +99,7 @@ def set_bg_local(image_file):
 
             div.stButton > button:hover {{
                 background-color: #FFB6C1 !important;
-                border-color: #F19CBB !important;
+                border-color: #FFB6C1 !important;
             }}
 
             .prediction-box {{
@@ -121,7 +121,7 @@ def set_bg_local(image_file):
                 padding: 15px;
                 border-radius: 15px;
                 text-align: center;
-                color: #D02090;
+                color: #FFC0CB;
                 font-weight: bold;
                 font-family: 'Comic Sans MS', cursive;
                 margin: 5px;
