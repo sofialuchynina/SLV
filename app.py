@@ -113,7 +113,7 @@ def set_bg_local(image_file):
 set_bg_local("abstract-pink-pastel-shadow-light-diagonal-shape-background_164305-3819.avif")
 
 # --- 4. ЗАГОЛОВОК ТА ВВЕДЕННЯ ---
-st.title("Забий на розвиток, деградуй разом з Нами!!!🌸")
+st.title("Сука, Любить Він мене?")
 
 question = st.text_input("Давай ніщєта, задавай питання:", placeholder="тут")
 
@@ -203,7 +203,7 @@ tarot_deck = [
 ]
 
 # --- 6. ЛОГІКА РОЗКЛАДУ ---
-if st.button("Фух, Амінь", disabled=is_disabled):
+if st.button("Летс гоу бічессссс", disabled=is_disabled):
   selected_cards = random.sample(tarot_deck, 3)
 
   cols = st.columns(3)
@@ -214,7 +214,7 @@ if st.button("Фух, Амінь", disabled=is_disabled):
     )
 
   if model:
-    with st.spinner("Чекай, бо то тобі не квантовий кампутєр..."):
+    with st.spinner("Ну їбать"):
       try:
         prompt = (
             f"Ти таролог у стилі 'подружки-гадалки', яка може як добре про карти"
