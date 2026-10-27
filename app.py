@@ -84,7 +84,7 @@ def set_bg_local(image_file):
             }}
 
             input::placeholder {{
-                color: #4B4B4B !important;
+                color: #5D2E46 !important;
             }}
 
             div.stButton > button {{
