@@ -143,7 +143,7 @@ def set_bg_local(image_file):
                 left: 0;
                 width: 100%;
                 text-align: center;
-                color: #D02090;
+                color: #FFC0CB;
                 font-family: 'Comic Sans MS', cursive;
                 font-size: 24px;
                 font-weight: bold;
