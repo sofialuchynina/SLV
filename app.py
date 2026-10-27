@@ -55,7 +55,7 @@ st.set_page_config(
 st.markdown("""
     <style>
     .stApp {
-        background-color: #FFE4E1;
+        background-image: url('C:\Users\Sofia\Desktop\пітон\tarot_progect\dIQMZLS.jpg');
     }
     h1 {
         color: #D02090 !important;
@@ -151,7 +151,7 @@ if st.button("Фух, Амінь", disabled=is_disabled):
                     f"Ти таролог у стилі 'подружки-гадалки', яка може як добре про карти сказати, так і погане, а також давай точну відповідь на запитання. Питання: '{question}'. "
                     f"Випали карти: {', '.join(selected_cards)}. "
                     f"Дай коротке, зухвале, але магічне пророцтво українською мовою. "
-                    f"Використовуй емодзі та звертайся до користувача на 'ти'."
+                    f"Використовуй емодзі, мати та звертайся до користувача на 'ти'."
                 )
                 response = model.generate_content(prompt)
                 
