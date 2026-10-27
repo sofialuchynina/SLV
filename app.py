@@ -34,7 +34,7 @@ model = get_working_model()
 st.set_page_config(page_title="SLV", page_icon="💌", layout="centered")
 
 
-# Функція для завантаження локальної картинки як фону
+# Функція для завантаження локальної .avif картинки як фону
 def set_bg_local(image_file):
   try:
     with open(image_file, "rb") as f:
@@ -43,7 +43,7 @@ def set_bg_local(image_file):
         f"""
         <style>
         .stApp {{
-            background-image: url(data:image/jpeg;base64,{encoded_string});
+            background-image: url(data:image/avif;base64,{encoded_string});
             background-size: cover;
             background-position: center;
         }}
@@ -109,8 +109,8 @@ def set_bg_local(image_file):
     st.error(f"Не вдалося завантажити фонове зображення: {e}")
 
 
-# Викликаємо функцію за назвою файлу, який лежить поруч із app.py
-set_bg_local("a1ed4abc69fe6bbcf7b0b5d5ade029a9.jpg")
+# Викликаємо функцію з назвою твого avif-файлу
+set_bg_local("abstract-pink-pastel-shadow-light-diagonal-shape-background_164305-3819.avif")
 
 # --- 4. ЗАГОЛОВОК ТА ВВЕДЕННЯ ---
 st.title("Забий на розвиток, деградуй разом з Нами!!!🌸")
